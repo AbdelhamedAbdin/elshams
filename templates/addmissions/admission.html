@@ -1,0 +1,402 @@
+{% extends 'base.html' %}
+{% block title %} صفحة التقديم الى مدرسة الشمس {% endblock %}
+{% load widget_tweaks %}
+
+{% block body %}
+    <!-- Start Page Title Area -->
+    <div class="banner-area admission">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container">
+                    <div class="page-title-content">
+                        <h2>طلب التحاق</h2>
+                        <ul>
+                            <li>
+                                <a href="{% url 'index:home' %}"> الرئيسية </a>
+                                <i class="flaticon-fast-forward"></i>
+                                <p class="active">طلب التحاق</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Title Area -->
+
+    <!-- Terms & Conditions -->
+    <section class="admission-area">
+        <div class="container">
+        {% if messages %}
+        <div class="contact_message">
+            <div class="container">
+                {% for message in messages %}
+                    {% if "success_join" in message.tags %}
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <p>{{ message }}</p>
+                        <button type="button" class="btn-close text-left" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+            {% if forms.errors %}
+            <div class="alert alert-danger text-danger">
+                <span>من فضلك قم بالتحقق من الاخطاء الموجودة فى الاستمارة وقم بمحاولة الارسال مرة اخرى</span>
+            </div>
+            {% endif %}
+            <div class="section-title">
+                <h2>طلب الالتحاق بالمدرسة للعام الدراسى <span id="next-year"></span>/<span id="curr-year"></span></h2>
+                <ul>
+                    <li>
+                        - سيتم التواصل معكم وتحديد موعد المقابلة بمجرد ملئ هذه الاستمارة
+                    </li>
+                    <li>
+                        - فى حالة ملئ استمارة ورقية فى المدرسة يرجى عدم ملئ هذه الاستمارة.
+                    </li>
+                    <li>
+                        - يرجى العلم ان اولوية القبول ( لمن لهم اخوه بالمدرسة _ لمن هم داخل المربع السكنى الاقرب _ الاكبر سنناً )
+                    </li>
+                    <li>
+                        - فى حالة وجود اي استفسارات يرجى ارسال رسالة على الواتس اب للرقم 01116033005 او الاتصال بنفس الرقم او زيارتنا فى 14 شارع النور المتفرع من ش فيضى مدينة الشمس القديمة خلف مدرسة المحافظة على القرآن  ،حلوان
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="admission-form">
+                <h2>استمارة التحاق</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="row">
+                        <!-- Date Record -->
+                        <div class="form-group col-md-12">
+                            {% render_field forms.date %}
+                        </div>
+
+                        <div class="form-group col-md-12">
+                            <label for="id_child_name" id="child_name">
+                                <strong>
+                                    اسم الطفل
+                                </strong>
+                            </label>
+                            {% render_field forms.child_name class="form-control" placeholder="اسم الطفل" %}
+                            {% for field, error in forms.errors.items %}
+                                {% if field == 'child_name' %}
+                                    <div class="help-block with-errors text-danger">{{ error }}</div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label id="class_join">
+                                <strong>الصف المراد الالتحاق به</strong>
+                            </label>
+                            <div class="row">
+                            {% for choices in forms.class_join %}
+                                <div class="col-md-6">{{ choices }}</div>
+                            {% endfor %}
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="id_international_id" id="international_id">
+                                <strong>
+                                    الرقم القومى (من واقع شهادة ميلاد الطفل)
+                                </strong>
+                            </label>
+                            {% render_field forms.international_id class="form-control" placeholder="الرقم القومى" %}
+                            {% for field, error in forms.errors.items %}
+                                {% if field == 'international_id' %}
+                                    <div class="help-block with-errors text-danger">{{ error }}</div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="id_birth_date">
+                                <strong>تاريخ ميلاد الطفل
+                                </strong>
+                            </label>
+                            {% render_field forms.birth_date class="form-control" placeholder="تاريخ الميلاد" type="date" %}
+                            {% for field, error in forms.errors.items %}
+                                {% if field == 'birth_date' %}
+                                    <div class="help-block with-errors text-danger">{{ error }}</div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="id_october_age">
+                                <strong>السن اول اكتوبر (ان امكن حسابه)
+                                </strong>
+                            </label>
+                            {% render_field forms.october_age class="form-control" placeholder="السن اول اكتوبر" %}
+                            {% for field, error in forms.errors.items %}
+                                {% if field == 'october_age' %}
+                                    <div class="help-block with-errors text-danger">{{ error }}</div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="id_address">
+                            <strong>
+                                العنوان بالتفصيل
+                            </strong></label>
+                            {% render_field forms.address class="form-control" placeholder="العنوان" %}
+                            <!-- Raise Error -->
+                            {% for field, error in forms.errors.items %}
+                                {% if field == 'address' %}
+                                    <div class="help-block with-errors text-danger">{{ error }}</div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <!-- Question -->
+                        <div class="form-group col-md-12">
+                            <label for="is_joined_before">
+                                <strong>
+                                    هل التحق بدار حضانة او مدرسة من قبل ؟
+                                </strong>
+                            </label>
+                            <div class="row">
+                                {% for choices in forms.is_joined_before %}
+                                    <div class="col-md-6 joined_before">{{ choices }}</div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <!-- Show this form depending on is_joined_before field -->
+                        <div class="form-group col-md-12 d-none" id="join_question">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="id_is_joined_name">
+                                        <strong>
+                                            من فضلك اذكر اسم المدرسة التى تم الالتحاق بها
+                                        </strong></label>
+                                    {% render_field forms.is_joined_name class="form-control" placeholder="العنوان" %}
+                                    <!-- Raise Error -->
+                                    {% for field, error in forms.errors.items %}
+                                        {% if field == 'is_joined_name' %}
+                                            <div class="help-block with-errors text-danger">{{ error }}</div>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="id_is_joined_duration">
+                                        <strong>
+                                            من فضلك اذكر المدة التى قضاها الطالب
+                                        </strong></label>
+                                    {% render_field forms.is_joined_duration class="form-control" placeholder="المدة" %}
+                                    <!-- Raise Error -->
+                                    {% for field, error in forms.errors.items %}
+                                        {% if field == 'is_joined_duration' %}
+                                            <div class="help-block with-errors text-danger">{{ error }}</div>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- Question -->
+                        <div class="form-group col-md-12">
+                            <label for="id_siblings_count">
+                                <strong>
+                                    هل للطالب اخوة فى المدرسة؟
+                                </strong>
+                            </label>
+                            <div class="row">
+                                {% for choices in forms.siblings_count %}
+                                    <div class="col-md-6 sibl_in">{{ choices }}</div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <!-- Show this form depending on siblings_count field -->
+                        <div class="form-group col-md-12 d-none" id="sibl_question">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label for="id_siblings_count_name">
+                                        <strong>
+                                            اسم الاخ
+                                        </strong>
+                                    </label>
+                                    {% render_field forms.siblings_count_name class="form-control" placeholder="اسم الاخ" %}
+                                </div>
+                                <div class="col-md-12 mt-2">
+                                    <label for="id_siblings_count_class"><strong>الصف الدراسى للاخ</strong></label>
+                                    <div class="row">
+                                        {% for choices in forms.siblings_count_class %}
+                                            <div class="col-md-6">{{ choices }}</div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- contact by -->
+                        <div class="form-group col-md-6">
+                            <label for="id_phone_number">
+                                <strong>
+                                    رقم موبايل (متوافر به واتساب)
+                                </strong>
+                            </label>
+                            {% render_field forms.phone_number class="form-control" placeholder="رقم الموبايل" %}
+                            <!-- Raise Error -->
+                            {% for field, error in forms.errors.items %}
+                                {% if field == 'phone_number' %}
+                                    <div class="help-block with-errors text-danger">{{ error }}</div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="id_email">
+                                <strong>
+                                    البريد الالكترونى
+                                </strong>
+                            </label>
+                            {% render_field forms.email class="form-control" placeholder="البريد الاكترونى" %}
+                            <!-- Raise Error -->
+                            {% for field, error in forms.errors.items %}
+                                {% if field == 'email' %}
+                                    <div class="help-block with-errors text-danger">{{ error }}</div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="id_mother_name">
+                                <strong>
+                                    اسم الام
+                                </strong>
+                            </label>
+                            {% render_field forms.mother_name class="form-control" placeholder="اسم الام" %}
+                            {% for field, error in forms.errors.items %}
+                                {% if field == 'mother_name' %}
+                                    <div class="help-block with-errors text-danger">{{ error }}</div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="id_mother_phone_number">
+                                <strong>
+                                    رقم موبايل الام
+                                </strong>
+                            </label>
+                            {% render_field forms.mother_phone_number class="form-control" placeholder="رقم موبايل الام" %}
+                            {% for field, error in forms.errors.items %}
+                                {% if field == 'mother_phone_number' %}
+                                    <div class="help-block with-errors text-danger">{{ error }}</div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="id_mother_job">
+                                <strong>
+                                    وظيفة الام
+                                </strong>
+                            </label>
+                            <div class="row">
+                            {% for choices in forms.mother_job %}
+                                <div class="col-md-6 mother_job">{{ choices }}</div>
+                            {% endfor %}
+                            </div>
+                        </div>
+                        <!-- if the answer is Other ask this question [optional] -->
+                        <div class="form-group col-md-12 d-none" id="mother_job_question">
+                            <label for="id_what_mother_job">
+                                <strong>
+                                    ما هى وظيفة الام؟
+                                </strong>
+                            </label>
+                            {% render_field forms.what_mother_job class="form-control" placeholder="وظيفة الام (محاسبة, ...الخ)" %}
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="id_mother_qualification">
+                                <strong>
+                                    مؤهل الام
+                                </strong>
+                            </label>
+                            <div class="row">
+                                {% for choices in forms.mother_qualification %}
+                                    <div class="col-md-6 mother_qualif">{{ choices }}</div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <!-- if qualification is Other ask this question [optional] -->
+                        <div class="form-group col-md-12 d-none" id="mother_qualif">
+                            <label for="id_mother_qualification_other"><strong>ما هو مؤهل الام؟</strong></label>
+                            {% render_field forms.mother_qualification_other class="form-control" placeholder="على سبيل المثال: ثانوى عام" %}
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="id_father_name">
+                                <strong>
+                                    اسم الاب
+                                </strong>
+                            </label>
+                            {% render_field forms.father_name class="form-control" placeholder="اسم الاب" %}
+                            {% for field, error in forms.errors.items %}
+                                {% if field == 'father_name' %}
+                                    <div class="help-block with-errors text-danger">{{ error }}</div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="id_father_phone_number">
+                                <strong>
+                                    رقم موبايل الاب
+                                </strong>
+                            </label>
+                            {% render_field forms.father_phone_number class="form-control" placeholder="رقم الموبايل" %}
+                            {% for field, error in forms.errors.items %}
+                                {% if field == 'father_phone' %}
+                                    <div class="help-block with-errors text-danger">{{ error }}</div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="id_father_job">
+                                <strong>
+                                    وظيفة الاب
+                                </strong>
+                            </label>
+                            {% render_field forms.father_job class="form-control" placeholder="وظيفة الاب" %}
+                            {% for field, error in forms.errors.items %}
+                                {% if field == 'father_job' %}
+                                    <div class="help-block with-errors text-danger">{{ error }}</div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="id_father_qualification">
+                                <strong>
+                                    مؤهل الاب
+                                </strong>
+                            </label>
+                            <div class="row">
+                                {% for choices in forms.father_qualification %}
+                                    <div class="col-md-6 father_qualif">{{ choices }}</div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="form-group col-md-12 d-none" id="father_qualif">
+                            <label for="id_father_qualification_other">
+                                <strong>
+                                    ما هو مؤهل الاب؟
+                                </strong>
+                            </label>
+                            {% render_field forms.father_qualification_other class="form-control" placeholder="على سبيل المثال: ثانوى عام" %}
+                        </div>
+
+                        <!-- Check Terms -->
+                        <div class="form-check">
+                            <input class="form-check-input" name="admission-terms" type="checkbox" id="gridCheck" />
+                            <label class="form-check-label" for="gridCheck">
+                                هل توافق على جميع البنود والشروط
+                            </label>
+                        </div>
+                    </div>
+                    <input type="submit" class="box-btn" value="سجل الان">
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- End Terms & Conditions -->
+{% endblock %}

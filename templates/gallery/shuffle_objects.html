@@ -1,0 +1,89 @@
+{% if is_pager %}
+<div class="row gall-list">
+    {% for data_shuffle in pagination.object_list %}
+        <!-- KG level -->
+        {% if data_shuffle.education_level.level == "روضة" %}
+        <div class="col-lg-4 col-md-6 item kg">
+            <div class="single-gall">
+                <div class="gall-img">
+                    <a href="{{ data_shuffle.get_image_url }}" class="image-pop">
+                        <img style="height: 470px;" src="{{ data_shuffle.get_image_url }}" alt="gallery" />
+                    </a>
+                </div>
+                <div class="gall-content">
+                    <h3>{{ data_shuffle.education_level.level }}</h3>
+                </div>
+            </div>
+        </div>  
+        {% endif %}
+
+        <!-- Primary level -->
+        {% if data_shuffle.education_level.level == "ابتدائى" %}
+        <div class="col-lg-4 col-md-6 item primary">
+            <div class="single-gall">
+                <div class="gall-img">
+                    <a href="{{ data_shuffle.get_image_url }}" class="image-pop">
+                        <img style="height: 470px;" src="{{ data_shuffle.get_image_url }}" alt="gallery" />
+                    </a>
+                </div>
+                <div class="gall-content">
+                    <h3>{{ data_shuffle.education_level.level }}</h3>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- activity -->
+        {% if data_shuffle.education_level.level == "انشطة عامة" %}
+        <div class="col-lg-4 col-md-6 item activity">
+            <div class="single-gall">
+                <div class="gall-img">
+                    <a href="{{ data_shuffle.get_image_url }}" class="image-pop">
+                        <img style="height: 470px;" src="{{ data_shuffle.get_image_url }}" alt="gallery" />
+                    </a>
+                </div>
+                <div class="gall-content">
+                    <h3>{{ data_shuffle.education_level.level }}</h3>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- appreciate -->
+        {% if data_shuffle.education_level.level == "التكريم" %}
+        <div class="col-lg-4 col-md-6 item appreciate">
+            <div class="single-gall">
+                <div class="gall-img">
+                    <a href="{{ data_shuffle.get_image_url }}" class="image-pop">
+                        <img style="height: 470px;" src="{{ data_shuffle.get_image_url }}" alt="gallery" />
+                    </a>
+                </div>
+                <div class="gall-content">
+                    <h3>{{ data_shuffle.education_level.level }}</h3>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    
+        <!-- summar_activity -->
+        {% if data_shuffle.education_level.level == "النشاط الصيفى" %}
+        <div class="col-lg-4 col-md-6 item summer_activity">
+            <div class="single-gall">
+                <div class="gall-img">
+                    <a href="{{ data_shuffle.get_image_url }}" class="image-pop">
+                        <img style="height: 470px;" src="{{ data_shuffle.get_image_url }}" alt="gallery" />
+                    </a>
+                </div>
+                <div class="gall-content">
+                    <h3>{{ data_shuffle.education_level.level }}</h3>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    {% endfor %}
+</div>
+{% else %}
+<h4 class="text-center">
+    لا توجد صور فى هذا الصفحة
+</h4>
+{% endif %} 

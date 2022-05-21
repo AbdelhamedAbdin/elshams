@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style>
+            .container {
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .text-center {
+                text-align: center;
+            }
+            .border {
+                border: 1px solid #8e8e8e;
+                padding: 10px 4px;
+                font-size: 15px;
+                border-radius: 10px;
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                height: 300px;
+                direction: rtl;
+            }
+            #line {
+            width: 90%;
+            border: 1px solid #8e8e8e;
+            margin-left: auto;
+            margin-right: auto;
+            }
+            .about span {
+                font-weight: bold;
+            }
+            .about p {
+                line-height: .5;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="border">
+                <div class="about">
+                    <p><span>الاسم:</span> {{ name }}</p>
+                    <p><span>رقم التليفون:</span> +{{ phone }}</p>
+                    <p><span>البريد الالكترونى:</span> {{ email }}</p>
+                </div>
+                <div id="line" class="text-center"></div>
+                <div class="message-content">
+                    <h4 class="text-center">محتوى الرسالة</h4>
+                    <p>{{ message }}</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

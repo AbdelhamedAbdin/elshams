@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    {% load static %}
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.rtl.min.css' %}" />
+        <!-- MeanMenu CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/meanmenu.css' %}" />
+        <!-- Fontawsome CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'assets/css/fontawesome-all.min.css' %}" />
+        <!-- Flaticon CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'assets/css/flaticon.css' %}" />
+        <!-- Magnific CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'assets/css/magnific-popup.css' %}" />
+        <!-- Animate CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'assets/css/animate.css' %}" />
+        <!-- Owl Carousel CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}" />
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+        <!-- Responsive CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}" />
+        <!-- RTL CSS -->
+        <link rel="stylesheet" href="{% static 'assets/css/rtl.css' %}" />
+        <!-- Custom CSS File -->
+        <link rel="stylesheet" href="{% static 'assets/css/custom.css' %}">
+        <!-- title -->
+        <title>{% block title %} BASE {% endblock %}</title>
+        <!-- icon image for page title -->
+        <link rel="icon" type="image/png" href="{% static 'assets/images/logo1.png' %}">
+        <!-- Datepicker Package -->
+        <link rel="stylesheet" href="{% static 'assets/css/datepicker/jquery-ui.min.css' %}"/>
+        <link rel="stylesheet" href="{% static 'assets/css/datepicker/jquery-ui.structure.min.css' %}"/>
+        <link rel="stylesheet" href="{% static 'assets/css/datepicker/jquery-ui.theme.min.css' %}"/>
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        {% if request.META.REMOTE_ADDR in request.META.ALLOWED_HOSTS %}
+        {% include 'navbar.html' %}
+        {% endif %}
+        {% block body %}
+
+        {% endblock %}
+        <!-- Footer -->
+        {% if request.META.REMOTE_ADDR in request.META.ALLOWED_HOSTS %}
+        {% include 'footer.html' %}
+        {% endif %}
+        <!-- Scroll top -->
+        <a href="#" class="scroll-top wow bounceInDown">
+            <i class="fas fa-angle-double-up"></i>
+        </a>
+
+        <!-- Js -->
+        <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+        <!-- Datepicker JS -->
+        <script src="{% static 'assets/js/datepicker/jquery-ui.min.js' %}"></script>
+        <!-- Boostrap Js  -->
+        <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+        <!-- MeanMenu JS -->
+        <script src="{% static 'assets/js/jquery.meanmenu.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+        <!-- Owl carasol Js -->
+        <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+        <!-- Wow js -->
+        <script src="{% static 'assets/js/wow.min.js' %}"></script>
+        <!-- Isotope Js -->
+        <script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
+        <!-- Form Validator Js  -->
+        <script src="{% static 'assets/js/form-validator.min.js' %}"></script>
+        <!-- Main js -->
+        <script src="{% static 'assets/js/main.js' %}"></script>
+        <!-- Custom js -->
+        <script src="{% static 'assets/js/custom.js' %}"></script>
+    </body>
+</html>

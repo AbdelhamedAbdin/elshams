@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block title %}Past Events{% endblock  %}
+{% block body %}
+    <!-- Start Page Title Area -->
+    <div class="banner-area events-bg">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container">
+                    <div class="page-title-content">
+                        <h2>الاحداث الماضية</h2>
+                        <ul>
+                            <li>
+                                <a href="{% url 'index:home' %}"> الرئيسية </a>
+                                <i class="flaticon-fast-forward"></i>
+                                <p class="active">الاحداث الماضية</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Title Area -->
+    
+    <!-- Events -->
+    <section class="events">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-events">
+                        <div class="events-img">
+                            <a href="single-events.html">
+                                <img src="assets/images/events/img1.png" alt="events" />
+                            </a>
+                        </div>
+                        <div class="content">
+                            <a href="single-events.html">
+                                <h2>Soccer completed successfully</h2>
+                            </a>
+                            <p class="calender">
+                                <i class="flaticon-calendar"></i> 01 April, 2021
+                            </p>
+                            <p>
+                                It is a long established fact that a reader will be distracted by the readable content of a page.
+                            </p>
+                            <a href="single-events.html" class="line-bnt">Read More <i class="flaticon-next"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <ul class="pagination">
+                        <li class="page-item"></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#"><i class="flaticon-left-arrow"></i></a>
+                        </li>
+
+                        <li class="page-item active">
+                            <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#"><i class="flaticon-next"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Events  -->
+{% endblock %}

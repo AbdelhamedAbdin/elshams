@@ -1,0 +1,202 @@
+{% extends 'base.html' %}
+{% block title %} About us {% endblock %}
+{% load static %}
+
+{% block body %}
+    <!-- Start Page Title Area -->
+    <div class="banner-area about">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container">
+                    <div class="page-title-content">
+                        <h2>من نحن</h2>
+                        <ul>
+                            <li>
+                                <a href="{% url 'index:home' %}"> الرئيسية </a>
+                                <i class="flaticon-fast-forward"></i>
+                                <p class="active"> من نحن</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Title Area -->
+
+    <!-- About Area -->
+    <section class="about-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="single-about">
+                        <div class="about-img">
+                            <img style="width: 1120px; height: 450px" src="{% static 'assets/images/about_us_banner.png' %}" alt="about" />
+                            <div class="about-img-layer"></div>
+                        </div>
+
+                        <div class="about-contnet">
+                            <h2>نبذة عن المدرسة</h2>
+                            <p>
+                                مدرسة خاص عربي تقع في مدينة حلوان اُنشأت عام 1979 .. تشمل صفوف رياض الأطفال و المرحلة الإبتدائية وهى الفرع الأول لسلسة مدارس الشمس الخاصة التى تعمل على تربية جيل واعٍ قادر على مواجهة تحديات الحياة وقادر على التفكير الجيد والإبداع
+                            </p>
+                            <h2>رؤية المدرسة</h2>
+                            <p>
+                                بناء جيل عصري قوي.. يعتز بوطنه..يحافظ علي هويته.. ويثق في نفسه..يحقق أهدافه .. مُحققًا تعليم و تعلم متميز يساعده فى نهضة مجتمعه ووطنه.
+                            </p>                
+                            <h2>رسالة المدرسة</h2>
+                            <p>
+                                المشاركة في تنشئة جيل مؤمن بربه..معتزًا بوطنيته..نافعًا لنفسه ولغيره..محافظًا علي ثقافته وقيمه وأخلاقه .. مسؤلًا وملتزمًا بما عليه من واجبات.. مواكبًا للتطور العلمي والتكنولوجي أخذًا أو عطاءًا ..فعّال في مجتمعه
+                            </p>  
+                            <h2>رسالة الروضة</h2>
+                            <p>
+                                نربي بالحب و نعلم باللعب لتنشئة جيلًا سويًا قادرًا علي تحقيق أهدافه .
+                                نفعل كل ما بوسعنا لإكمال رسالة رائدنا
+                                <span class="fw-bold">أ / أحمد أبو المجد </span> رحمه الله و اسكنه فسيح جناته
+                            </p>                                                                        
+                        </div>
+                        <div class="about-btn">
+                            {% comment %} 
+                            <a href="https://www.youtube.com/watch?v=_ysd-zHamjk" class="video-pop">
+                                <span class="video"> <i class="fa fa-play"></i> </span> Quick View at Edvi
+                            </a> 
+                            {% endcomment %}
+                            {% include 'about-us/presentation.html' %}
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!-- End About Area -->
+
+    <!-- Teachers Area -->
+    <section class="home-teachers-area pt-100">
+        <div class="container">
+            <div class="section-tittle text-center">
+                <h2>Honorable Teachers</h2>
+                <p>
+                    A college course is a class offered by a college or university. These courses are usually part of a program leading.
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-home-teacher">
+                        <div class="teacher-img">
+                            <a href="single-teacher.html">
+                                <img src="assets/images/teachers/img9.png" alt="teacher" /></a>
+                        </div>
+                        <div class="teachers-content">
+                            <h2>John Doe</h2>
+                            <p>Assistant Teacher</p>
+                        </div>
+                        <div class="teacher-social">
+                            <ul>
+                                <li>
+                                    <a href=""><i class="flaticon-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="flaticon-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="flaticon-envelope"></i></a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="flaticon-right-arrow"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-home-teacher">
+                        <div class="teacher-img">
+                            <a href="single-teacher.html">
+                                <img src="assets/images/teachers/img8.png" alt="teacher" /></a>
+                        </div>
+                        <div class="teachers-content">
+                            <h2>Evana Doe</h2>
+                            <p>Teacher</p>
+                        </div>
+                        <div class="teacher-social">
+                            <ul>
+                                <li>
+                                    <a href=""><i class="flaticon-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="flaticon-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="flaticon-envelope"></i></a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="flaticon-right-arrow"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-home-teacher">
+                        <div class="teacher-img">
+                            <a href="single-teacher.html">
+                                <img src="assets/images/teachers/img3.png" alt="teacher" /></a>
+                        </div>
+                        <div class="teachers-content">
+                            <h2>Smith Doe</h2>
+                            <p>English Teacher</p>
+                        </div>
+                        <div class="teacher-social">
+                            <ul>
+                                <li>
+                                    <a href=""><i class="flaticon-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="flaticon-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="flaticon-envelope"></i></a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="flaticon-right-arrow"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-home-teacher">
+                        <div class="teacher-img">
+                            <a href="single-teacher.html">
+                                <img src="assets/images/teachers/img12.png" alt="teacher" /></a>
+                        </div>
+                        <div class="teachers-content">
+                            <h2>Marida Doe</h2>
+                            <p>Cultuaral Advisor</p>
+                        </div>
+                        <div class="teacher-social">
+                            <ul>
+                                <li>
+                                    <a href=""><i class="flaticon-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="flaticon-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="flaticon-envelope"></i></a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="flaticon-right-arrow"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Teachers Area -->
+{% endblock %}

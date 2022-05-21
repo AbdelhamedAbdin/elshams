@@ -1,0 +1,75 @@
+{% load static %}
+<!-- Preloader -->
+<div id="loading">
+    <div id="loading-center">
+        <div id="loading-center-absolute">
+            <div class="object" id="object_one"></div>
+            <div class="object" id="object_two"></div>
+            <div class="object" id="object_three"></div>
+            <div class="object" id="object_four"></div>
+        </div>
+    </div>
+</div>
+<!-- End Preloader -->
+
+<!-- Start Navbar Area -->
+<div class="navbar-area">
+    <div class="mobile-nav">
+        <a href="{% url 'index:home' %}" class="logo brand">
+            <img style="width: 40px" src="{% static 'assets/images/logo1.png' %}" alt="logo" />
+        </a>
+    </div>
+
+    <div class="main-nav">
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light">
+                <a class="navbar-brand brand" href="{% url 'index:home' %}">
+                    <img src="{% static 'assets/images/logo1.png' %}" alt="logo" />
+                </a>
+                <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                    <ul class="navbar-nav text-right">
+                        <li class="nav-item">
+                            <a href="{% url 'index:home' %}" class="nav-link active">الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link dropdown-toggle">الاحداث</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a href="events.html" class="nav-link">الاحداث القادمة</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{% url 'events:past-events' %}" class="nav-link">الاحداث الماضية</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="single-events.html" class="nav-link">الاحداث الحالية</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'gallery:galleries' %}" class="nav-link"> المعرض و الانشطة</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'admission:admission' %}" class="nav-link">طلب التحاق</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="admission.html" class="nav-link">التقويم</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'about_us:about-us' %}" class="nav-link">من نحن</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'contact:contact-us' %}" class="nav-link">تواصل معنا</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link bell">
+                                <img class="img-fluid" src="{% static 'assets/images/bell.png' %}">
+                                <span id="notification-record">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- End Navbar Area -->

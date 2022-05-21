@@ -1,0 +1,600 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock %}
+{% load static %}
+
+{% block body %}
+    <!-- Slider area -->
+    <section class="slider-area">
+        <div class="home-slider owl-carousel owl-theme">
+            <div class="single-slider single-slider-bg-1">
+                <div class="d-table">
+                    <div class="d-table-cell">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-12 text-center">
+                                    <div class="slider-tittle one">
+                                        <h1>
+                                            نقوم بالتركيز على <span>تطوير الطلاب</span>
+                                        </h1>
+                                        <p>
+                                              تقديم افضل المساعدات للطلاب من اجل التفوق فى حياتهم الدراسية والاخلاقية بالاضافة الى بعض المناهج الدينية والتى ينتفعون بها مثل القران الكريم واللغة العربية
+                                        </p>
+                                    </div>
+                                    <div class="slider-btn bnt1 text-center">
+                                        <a href="admission.html" class="box-btn">انضم الينا الان</a>
+{#                                        <a href="special-class.html" class="border-btn">View Courses</a>#}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="single-slider single-slider-bg-2">
+                <div class="d-table">
+                    <div class="d-table-cell">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-12 text-center">
+                                    <div class="slider-tittle two">
+                                        <h1>
+                                            نقوم بالتركيز على <span>الانشطة الطلابية</span>
+                                        </h1>
+                                        <p>
+                                            تقديم انشطة فرعية لمساعدة الطلاب على التفكير وانشاء حلول منطقية للتغلب على الصعاب من خلال مشاركة الطلاب بعضهم البعض لتنميتهم
+                                        </p>
+                                    </div>
+                                    <div class="slider-btn bnt2">
+                                        <a href="admission.html" class="box-btn">انضم الينا الان</a>
+                                        <a href="special-class.html" class="border-btn">الأنشطة المددرسية</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Slider aera -->
+
+    <!-- Service area -->
+    <section class="service-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single-service text-center">
+                        <div class="service-icon">
+                            <i class="flaticon-clock"></i>
+                        </div>
+                        <div class="service-content">
+                            <h2>ساعات العمل</h2>
+                            <p>الأحد - الخميس: 7:00AM - 02:30PM </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="single-service text-center">
+                        <div class="service-icon">
+                            <i class="flaticon-pin"></i>
+                        </div>
+                        <div class="service-content">
+                            <h2>العنوان</h2>
+                            <p>14 شارع النور/امتداد شارع يوسف, مدينة الشمس القديمة. حلوان</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                    <div class="single-service text-center sst-10">
+                        <div class="service-icon">
+                            <i class="flaticon-telephone"></i>
+                        </div>
+                        <div class="service-content">
+                            <h2>رقم التليفون</h2>
+                            <p>201116033005+</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Service area -->
+
+    <div class="shape-ellips">
+        <img src="{% static 'assets/images/shape.png' %}" alt="shape" />
+    </div>
+
+    <!-- Regular Course area  -->
+    <section class="home-ragular-course pb-100">
+        <div class="container">
+            <div class="section-tittle text-center">
+                <h2>الأقسام الاكاديمية</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-ragular-course">
+                        <div class="course-img">
+                            <img class="academic-course" src="{% static 'assets/images/courses/img1.png' %}" alt="ragular" />
+                            <h2>القرآن</h2>
+                        </div>
+                        <div class="course-content">
+                            <p>
+
+بما أن القران هو نور الدنيا والآخرة للمؤمن ، فإن قسم القرآن الكريم يحرص دائمًا على دعم طلابنا في حفظ القرآن الكريم ومراجعته وتوضيح معانيه.
+وذلك لتمكين طلابنا الأعزاء من الالتزام بأخلاقه وتأكيدها بين بعضهم البعض.
+                            </p>
+{#                            <a href="single-class.html" class="border-btn">Read More</a>#}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-ragular-course">
+                        <div class="course-img">
+                            <img class="academic-course" src="{% static 'assets/images/courses/img2.png' %}" alt="ragular" />
+                            <h2>اللغة العربية</h2>
+                        </div>
+                        <div class="course-content">
+                            <p>
+                                يتم تعليم الطلاب مهارات الاتصال الاجتماعي من خلال تعليمهم اللغة التي يتحدث بها حوالى 300 مليون شخص في العالم.
+                            </p>
+                            <p>لذا فإن واجبنا هو الحفاظ عليها وتعليمها للأطفال وإيجاد طرق بسيطة لتوصيل لغتنا الجميلة.</p>
+{#                            <a href="single-class.html" class="border-btn">Read More</a>#}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 sst-10">
+                    <div class="single-ragular-course">
+                        <div class="course-img">
+                            <img class="academic-course" src="{% static 'assets/images/courses/img3.png' %}" alt="ragular" />
+                            <h2>اللغة الانجليزية</h2>
+                        </div>
+                        <div class="course-content">
+                            <p>
+                                بما ان اللغة الاجنبية هى الارتكاز الرئيسى الثانى بعد العربية فان المدرسين يقومو بتغيير اسلوبهم وطريقة القائهم عاما بعد عام لضمان اخراج طلاب قادرين على استخدام تلك اللغة فى مواقف الحياة الواقعية للتواصل بطلاقة ودقة وثقة
+                            </p>
+{#                            <a href="single-class.html" class="border-btn">Read More</a>#}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Regular Course area  -->
+
+    <!-- Choose area  -->
+    <section class="choose-area">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-6 ps-0">
+                    <div class="home-choose-img">
+                        <img style="width: 845px;height: 638px" src="{% static 'assets/images/choose1.png' %}" alt="choose" />
+                    </div>
+                </div>
+
+                <div class="col-lg-6 home-choose">
+                    <div class="home-choose-content">
+                        <div class="section-tittle">
+                            <h2>لماذا نحن؟</h2>
+                            <p>
+                                تفترض نظرية اختيار المدرسة أن الآباء هم فاعلون عقلانيون يمكنهم جمع المعلومات واستهلاكها للعثور على مدرسة تتوافق مع احتياجات أطفالهم. رغبات أولياء الأمور وقدرتهم على اختيار مدارس ذات جودة.
+                            </p>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-12 col-md-5">
+                                <ul class="choose-list-left">
+                                    <li> <i class="flaticon-check-mark"></i>المشاركة الجماعية</li>
+                                    <li> <i class="flaticon-check-mark"></i>متابعة الطلاب</li>
+                                    <li><i class="flaticon-check-mark"></i>بناء شخصية</li>
+                                    <li><i class="flaticon-check-mark"></i>التعلم مع المرح</li>
+                                    <li><i class="flaticon-check-mark"></i>سلامة الاطفال</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-8 col-sm-12 col-md-7">
+                                <div class="choose-list-home">
+                                    <ul>
+                                        <li> <i class="flaticon-check-mark"></i>أنشطة طلابية</li>
+                                        <li> <i class="flaticon-check-mark"></i>حفلات تكريم للطلاب</li>
+                                        <li><i class="flaticon-check-mark"></i>تحفيظ قران</li>
+                                        <li><i class="flaticon-check-mark"></i>الاهتمام بالتكنولوجيا</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="" class="box-btn">اقرأ المزيد عنا</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Choose area -->
+
+    <!-- Special Course -->
+    <section class="home-special-course">
+        <div class="container-fluid">
+            <div class="section-tittle text-center">
+                <h2>المعرض</h2>
+            </div>
+
+            <div class="home-course-slider owl-carousel owl-theme">
+                <div class="single-home-special-course">
+                    <div class="course-img">
+                        <img src="{% static 'assets/images/courses/img4.png' %}" alt="course" />
+                        <div class="course-content">
+                            <h2>Painting Class</h2>
+                            <p>
+                                Paint lessons are a type of formal instruction in playing a musical instrument or singing.
+                            </p>
+                            <a href="single-class.html" class="box-btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="single-home-special-course">
+                    <div class="course-img">
+                        <img src="{% static 'assets/images/courses/img5.png' %}" alt="course" />
+                        <div class="course-content">
+                            <h2>Science Lab</h2>
+                            <p>
+                                Science lessons are a type of formal instruction in playing a musical instrument or singing.
+                            </p>
+                            <a href="single-class.html" class="box-btn">Read More</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="single-home-special-course">
+                    <div class="course-img">
+                        <img src="{% static 'assets/images/courses/img6.png' %}" alt="course" />
+                        <div class="course-content">
+                            <h2>Music Class</h2>
+                            <p>
+                                Science lessons are a type of formal instruction in playing a musical instrument or singing.
+                            </p>
+                            <a href="single-class.html" class="box-btn">Read More</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="single-home-special-course">
+                    <div class="course-img">
+                        <img src="{% static 'assets/images/courses/img7.png' %}" alt="course" />
+                        <div class="course-content">
+                            <h2>Art Class</h2>
+                            <p>
+                                Science lessons are a type of formal instruction in playing a musical instrument or singing.
+                            </p>
+                            <a href="single-class.html" class="box-btn">Read More</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Special Course -->
+
+    <!-- Course Slider  -->
+    <section class="course-slider-area">
+        <div class="container">
+            <div class="course-slider owl-carousel owl-theme">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 col-md-5">
+                        <div class="course-slider-img">
+                            <img src="{% static 'assets/images/courses/slider-img.png' %}" alt="course" />
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <div class="course-slider-content">
+                            <h2>Cultural Program 01 April 2021</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis suspendisse ultrices gravida.
+                            </p>
+
+                            <div class="course-slider-btn">
+                                <a href="" class="box-btn">Registation Now</a>
+                                <a href="" class="border-btn">See More Events</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row align-items-center">
+                    <div class="col-lg-5 col-md-5">
+                        <div class="course-slider-img">
+                            <img src="{% static 'assets/images/courses/slider-img2.png' %}" alt="course" />
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-7">
+                        <div class="course-slider-content">
+                            <h2>Annual Program 01 April 2021</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis suspendisse ultrices gravida.
+                            </p>
+
+                            <div class="course-slider-btn">
+                                <a href="" class="box-btn">Registation Now</a>
+                                <a href="" class="border-btn">See More Events</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Course Slider -->
+
+    <span class="left-shape">
+        <img src="{% static 'assets/images/left-shape.png' %}" alt="shape"/>
+    </span>
+
+    <!-- News Area -->
+    <section class="home-news pb-100 pt-100">
+        <div class="container">
+            <div class="section-tittle text-center">
+                <h2>Our Daily News Update</h2>
+                <p>
+                    A college course is a class offered by a college or university. These courses are usually part of a program leading.
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-home-news">
+                        <a href="single-news.html">
+                            <img src="{% static 'assets/images/news/img1.png' %}" alt="news" />
+                        </a>
+
+                        <div class="single-home-content">
+                            <h2>Soccer completed successfully</h2>
+                            <p class="calender">
+                                <i class="flaticon-calendar"></i> 01 April, 2021
+                            </p>
+                            <p>
+                                It is a long established fact that a reader will be distracted by the readable content of a page.
+                            </p>
+                            <a href="single-news.html" class="line-bnt">Read More <i class="flaticon-next"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-home-news">
+                        <a href="single-news.html">
+                            <img src="{% static 'assets/images/news/img2.png' %}" alt="news" />
+                        </a>
+
+                        <div class="single-home-content">
+                            <h2>Top Resuslt Holder 2021</h2>
+                            <p class="calender">
+                                <i class="flaticon-calendar"></i> 01 April, 2021
+                            </p>
+                            <p>
+                                It is a long established fact that a reader will be distracted by the readable content of a page.
+                            </p>
+                            <a href="single-news.html" class="line-bnt">Read More <i class="flaticon-next"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 sst-10">
+                    <div class="single-home-news">
+                        <a href="single-news.html">
+                            <img src="{% static 'assets/images/news/img3.png' %}" alt="news" />
+                        </a>
+
+                        <div class="single-home-content">
+                            <h2>Leaning About Virus COVID-19</h2>
+                            <p class="calender">
+                                <i class="flaticon-calendar"></i> 01 April, 2021
+                            </p>
+                            <p>
+                                It is a long established fact that a reader will be distracted by the readable content of a page.
+                            </p>
+                            <a href="single-news.html" class="line-bnt">Read More <i class="flaticon-next"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End News Area -->
+
+    <!-- Teachers Area -->
+    <section class="home-teachers-area">
+        <div class="container">
+            <div class="section-tittle text-center">
+                <h2>Honorable Teachers</h2>
+                <p>
+                    A college course is a class offered by a college or university. These courses are usually part of a program leading.
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-home-teacher">
+                        <div class="teacher-img">
+                            <a href="single-teacher.html">
+                                <img src="{% static 'assets/images/teachers/img9.png' %}" alt="teacher" /></a>
+                        </div>
+                        <div class="teachers-content">
+                            <h2>John Doe</h2>
+                            <p>Assistant Teacher</p>
+                        </div>
+                        <div class="teacher-social">
+                            <ul>
+                                <li>
+                                    <a href="#"><i class="flaticon-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="flaticon-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="flaticon-envelope"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="flaticon-right-arrow"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-home-teacher">
+                        <div class="teacher-img">
+                            <a href="single-teacher.html">
+                                <img src="{% static 'assets/images/teachers/img8.png' %}" alt="teacher" /></a>
+                        </div>
+                        <div class="teachers-content">
+                            <h2>Evana Doe</h2>
+                            <p>Teacher</p>
+                        </div>
+                        <div class="teacher-social">
+                            <ul>
+                                <li>
+                                    <a href="#"><i class="flaticon-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="flaticon-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="flaticon-envelope"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="flaticon-right-arrow"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-home-teacher">
+                        <div class="teacher-img">
+                            <a href="single-teacher.html">
+                                <img src="{% static 'assets/images/teachers/img3.png' %}" alt="teacher" /></a>
+                        </div>
+                        <div class="teachers-content">
+                            <h2>Smith Doe</h2>
+                            <p>English Teacher</p>
+                        </div>
+                        <div class="teacher-social">
+                            <ul>
+                                <li>
+                                    <a href="#"><i class="flaticon-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="flaticon-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="flaticon-envelope"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="flaticon-right-arrow"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-home-teacher">
+                        <div class="teacher-img">
+                            <a href="single-teacher.html">
+                                <img src="{% static 'assets/images/teachers/img12.png' %}" alt="teacher" /></a>
+
+                        </div>
+                        <div class="teachers-content">
+                            <h2>Marida Doe</h2>
+                            <p>Cultuaral Advisor</p>
+                        </div>
+                        <div class="teacher-social">
+                            <ul>
+                                <li>
+                                    <a href="#"><i class="flaticon-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="flaticon-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="flaticon-envelope"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="flaticon-right-arrow"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Teachers Area -->
+
+    <!-- Contact Area -->
+    <section class="home-contact-area pb-100 pt-100">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-6 ps-0">
+                    <div class="contact-img">
+                        <img src="{% static 'assets/images/contact.png' %}" alt="contact" />
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="home-contact-content">
+                        <h2>What Do You Want to Know?</h2>
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-lg-6 col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" name="name" id="name" class="form-control" required data-error="Please enter your name" placeholder="Your Name" />
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-sm-6">
+                                    <div class="form-group">
+                                        <input type="email" name="email" id="email" class="form-control" required data-error="Please enter your email" placeholder="Your Email" />
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" name="phone_number" id="phone_number" required data-error="Please enter your number" class="form-control" placeholder="Your Phone" />
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" name="msg_subject" id="msg_subject" class="form-control" required data-error="Please enter your subject" placeholder="Your Subject" />
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group">
+                                        <textarea name="message" class="form-control" id="message" cols="30" rows="5" required data-error="Write your message" placeholder="Your Message"></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 col-md-12">
+                                    <button type="submit" class="default-btn page-btn box-btn">
+                                                Send Message
+                                     </button>
+                                    <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Contact Area -->
+{% endblock %}

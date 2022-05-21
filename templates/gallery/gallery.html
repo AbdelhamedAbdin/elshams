@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block title %} Contact Us {% endblock %}
+{% load static %}
+{% load widget_tweaks %}
+{% load mathfilters %}
+
+{% block body %}
+    <!-- Start Page Title Area -->
+    <div class="banner-area gallery">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container">
+                    <div class="page-title-content">
+                        <h2>Gallery</h2>
+                        <ul>
+                            <li>
+                                <a href="{% url 'index:home' %}"> الرئيسية </a>
+                                <i class="flaticon-fast-forward"></i>
+                                <p class="active"> المعرض </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Title Area -->
+    
+    <!-- Gallery -->
+    <section class="gallery-area">
+        <div class="container">
+        {% if pagination.object_list %}
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="all-gall">
+                        <li class="active" data-filter="*"><span>جميع الصور</span></li>
+                        <li data-filter=".kg"><span>رياض اطفال</span></li>
+                        <li data-filter=".primary"><span>ابتدائى</span></li>
+                        <li data-filter=".activity"><span>انشطة عامة</span></li>
+                        <li data-filter=".appreciate"><span>تكريم المدرسين</span></li>
+                        <li data-filter=".summer_activity"><span>النشاط الصيفى</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Shuffle List -->
+            {% include "gallery/shuffle_objects.html" %}
+
+            <!-- start pagination -->
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <ul class="pagination">
+                        <li class="page-item not-active{% if not prev_url %} disabled {% endif %}">
+                            <a class="page-link" href="{{ prev_url }}"><i class="flaticon-left-arrow"></i></a>
+                        </li>
+                        
+                        {% for n in pagination.paginator.page_range %}
+                            {% if pagination.number == n %}
+                                <li class="page-item active">
+                                    <a class="page-link" href="?page={{ n }}">
+                                        {{ n }}
+                                        <span class="sr-only">(current)</span>
+                                    </a>
+                                </li>
+                            {% elif n > pagination.number|add:-4 and n < pagination.number|add:4 %}
+                                <li class="page-item not-active">
+                                    <a class="page-link" href="?page={{ n }}">
+                                        {{ n }}
+                                    </a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+
+                        <li class="page-item not-active{% if not next_url %} disabled {% endif %}">
+                            <a class="page-link" href="{{ next_url }}"><i class="flaticon-next"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        {% else %}
+            <h4 class="text-center">لا توجد البومات لعرضها</h4>
+        {% endif %}
+        </div>
+    </section>
+    <!-- End Gallery -->
+{% endblock %}

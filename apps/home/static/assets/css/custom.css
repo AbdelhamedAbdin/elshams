@@ -1,0 +1,54 @@
+.single-ragular-course .academic-course {
+    width: 370px;
+    height: 170px;
+}
+/* Modify Navbar */
+.brand {
+    width: 100px
+}
+.brand-footer {
+    width: 120px
+}
+.navbar-area .main-nav {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+.bell {
+    width: 25px;
+    position: relative;
+}
+.bell span {
+    position: absolute;
+    right: -7px;
+    top: -7px;
+    background-color: #52aff1b8;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 14px;
+    width: 22px;
+}
+/* Contact Us Page */
+.contact_message .btn-close {
+    left: 0;
+    right: unset !important;
+}
+.contact_message .alert {
+    padding: .5rem 1rem
+}
+/* Admission page */
+.admission-area .errorlist {
+    padding-left: 0;
+    padding-right: 0;
+}
+/* About-us */
+.about-area .about-img {
+    position: relative;
+}
+.about-img-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.3);
+}
